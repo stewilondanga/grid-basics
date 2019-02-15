@@ -115,7 +115,7 @@
   color: #1b998b;
 }
 
-/*#app .part a:after {
+#app .part a:after {
   content: attr(data-tooltip);
   display: block;
   width: 300px;
@@ -130,9 +130,10 @@
   opacity: 0;
   transition: all 0.2s ease;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-#app .part a:hover:after {
+
+/*#app .part a:hover:after {
   opacity: 1;
 }
 #app .practice-part {
