@@ -295,12 +295,13 @@
   color: #000;
 }
 
-/*#app #part-10 .practice-part-auto-flow-row #block-2 {
+#app #part-10 .practice-part-auto-flow-row #block-2 {
   grid-row: 2/span 2;
   background-color: #ffe5d4;
   color: #000;
 }
-#app #part-10 .practice-part-auto-flow-column .demo-part {
+
+/*#app #part-10 .practice-part-auto-flow-column .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: column;
 }
