@@ -69,10 +69,11 @@
   color: #fff;
 }
 
-/*#app footer a:hover, #app footer a:active {
+#app footer a:hover, #app footer a:active {
   color: #1b998b;
 }
-#app .part {
+
+/*#app .part {
   width: 90%;
   min-height: 100px;
   margin: 20px auto;
