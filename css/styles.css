@@ -42,12 +42,13 @@
   color: #0c7489;
 }
 
-/*#app header {
+#app header {
   background: #274060;
   border-bottom: var(--basic-border);
   box-shadow: var(--shadow-level-1);
 }
-#app header h1 {
+
+/*#app header h1 {
   margin: 0;
   text-align: center;
   padding: 10px;
