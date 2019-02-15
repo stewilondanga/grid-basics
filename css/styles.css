@@ -144,11 +144,12 @@
   overflow: hidden;
 }
 
-/*#app .practice-part .code-part {
+#app .practice-part .code-part {
   padding: 7px;
   border: var(--basic-border);
 }
-#app .practice-part .code-part code {
+
+/*#app .practice-part .code-part code {
   white-space: pre;
   word-break: normal;
   word-wrap: normal;
