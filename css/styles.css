@@ -107,10 +107,11 @@
   padding: 6px 0;
 }
 
-/*#app .part a {
+#app .part a {
   color: #0c7489;
 }
-#app .part a:hover, #app .part a:active {
+
+/*#app .part a:hover, #app .part a:active {
   color: #1b998b;
 }
 #app .part a:after {
