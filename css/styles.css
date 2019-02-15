@@ -73,7 +73,7 @@
   color: #1b998b;
 }
 
-/*#app .part {
+#app .part {
   width: 90%;
   min-height: 100px;
   margin: 20px auto;
@@ -82,9 +82,10 @@
   box-shadow: var(--shadow-level-1);
   position: relative;
   -webkit-transform: translatex(-130%);
-          transform: translatex(-130%);
+  transform: translatex(-130%);
 }
-#app .part#part-1 {
+
+/*#app .part#part-1 {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
