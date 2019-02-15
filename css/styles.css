@@ -133,10 +133,11 @@
   transform: translate(-50%, -50%);
 }
 
-/*#app .part a:hover:after {
+#app .part a:hover:after {
   opacity: 1;
 }
-#app .practice-part {
+
+/*#app .practice-part {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
