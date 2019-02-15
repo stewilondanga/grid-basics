@@ -227,10 +227,11 @@
   grid-row-end: 3;
 }
 
-/*#app #part-6 .practice-part-column-row .demo-part {
+#app #part-6 .practice-part-column-row .demo-part {
   grid-template-columns: repeat(3, 1fr);
 }
-#app #part-6 .practice-part-column-row #block-1 {
+
+/*#app #part-6 .practice-part-column-row #block-1 {
   color: #000;
   background-color: #ffe5d4;
   grid-column: 1/3;
