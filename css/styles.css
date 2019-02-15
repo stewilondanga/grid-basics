@@ -149,12 +149,13 @@
   border: var(--basic-border);
 }
 
-/*#app .practice-part .code-part code {
+#app .practice-part .code-part code {
   white-space: pre;
   word-break: normal;
   word-wrap: normal;
 }
-#app .practice-part .demo-part {
+
+/*#app .practice-part .demo-part {
   display: grid;
   background: #1b998b;
   border: var(--basic-border);
