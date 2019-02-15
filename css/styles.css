@@ -252,11 +252,12 @@
   row-gap: 15px;
 }
 
-/*#app #part-7 .practice-part-gap .demo-part {
+#app #part-7 .practice-part-gap .demo-part {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-#app #part-8 .practice-part-aligment-1 .demo-part {
+
+/*#app #part-8 .practice-part-aligment-1 .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 130px;
   justify-items: end;
