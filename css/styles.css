@@ -85,11 +85,12 @@
   transform: translatex(-130%);
 }
 
-/*#app .part#part-1 {
+#app .part#part-1 {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
-#app .part h2 {
+
+/*#app .part h2 {
   color: #274060;
   text-align: center;
   margin: 0 5px;
