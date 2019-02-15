@@ -172,13 +172,14 @@
   overflow: hidden;
 }
 
-/*#app .practice-part .demo-part .text-description {
+#app .practice-part .demo-part .text-description {
   padding: 8px 10px;
   font-size: 13px;
   line-height: 1.4;
   color: #274060;
 }
-#app #part-3 .practice-part-pixels .demo-part {
+
+/*#app #part-3 .practice-part-pixels .demo-part {
   grid-template-columns: 100px 100px 100px 100px;
 }
 #app #part-3 .practice-part-fr .demo-part {
