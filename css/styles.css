@@ -200,11 +200,12 @@
   grid-auto-rows: 50px;
 }
 
-/*#app #part-5 .practice-part-minmax .demo-part {
+#app #part-5 .practice-part-minmax .demo-part {
   grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(50px, auto);
 }
-#app #part-6 .practice-part-column-start-end .demo-part {
+
+/*#app #part-6 .practice-part-column-start-end .demo-part {
   grid-template-columns: repeat(3, 1fr);
 }
 #app #part-6 .practice-part-column-start-end #block-1 {
