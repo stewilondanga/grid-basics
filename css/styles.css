@@ -257,13 +257,14 @@
   gap: 10px;
 }
 
-/*#app #part-8 .practice-part-aligment-1 .demo-part {
+#app #part-8 .practice-part-aligment-1 .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 130px;
   justify-items: end;
   align-items: end;
 }
-#app #part-8 .practice-part-aligment-2 .demo-part {
+
+/*#app #part-8 .practice-part-aligment-2 .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 130px;
   justify-items: start;
