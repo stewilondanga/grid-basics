@@ -21,6 +21,587 @@
         </a>
     </div>
 
+    <main id="app">
+  	<div id="arrow-down">Scroll down<br /><i class="fas fa-arrow-down"></i></div>
+  	<header>
+  		<h1>Study Grid Layout</h1>
+  	</header>
+  	<section id="part-1" class='part' data-next="part-2">
+  		<h2>
+  			Basic concepts
+  		</h2>
+  		<p>
+  			A <b>grid</b> is an intersecting set of horizontal and vertical lines – one set defining columns and the other rows. Elements can be placed onto the grid, respecting these column and row lines. CSS grid layout has the following features:		</p>
+  		<ul>
+  			<li><a href="" data-tooltip="You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the new fr unit designed for this purpose." >Fixed and flexible track sizes</a></li>
+  			<li><a href=""  data-tooltip="You can place items into a precise location on the grid using line numbers, names or by targeting an area of the grid. Grid also contains an algorithm to control the placement of items not given an explicit position on the grid.">Item placement</a></li>
+  			<li><a href="" data-tooltip="You can define an explicit grid with grid layout but the specification also deals with the content added outside of a declared grid, which adds additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included.">Creation of additional tracks to hold content</a></li>
+  			<li><a href="" data-tooltip="Grid contains alignment features so that we can control how the items align once placed into a grid area, and how the entire grid is aligned. ">Alignment control</a></li>
+  			<li><a href="" data-tooltip="More than one item can be placed into a grid cell or area, they can partially overlap each other. This layering may then be controlled with z-index property.">Control of overlapping content</a></li>
+  		</ul>
+  	</section>
+  	<section id="part-2" class="part" data-next="part-3">
+  		<h2>Crid container</h2>
+  		<p>
+  			We create a grid container by declaring display: grid or display: inline-grid on an element. As soon as we do this all direct children of that element will become grid items.
+  		</p>
+  		<h3>See:</h3>
+  		<div class="practice-part">
+  			<div class="code-part">
+  				<code>
+  #grid{
+   display: grid;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  	</section>
+
+  	<section id="part-3" class='part' data-next="part-4">
+  		<h2>Grid Tracks</h2>
+  		<p>
+  		We define rows and columns on our grid with the grid-template-columns and grid-template-rows properties. These define grid tracks. A grid track is the space between any two lines on the grid.
+  		</p>
+  		<h3>Set width column 100 pixels:</h3>
+  		<div class="practice-part practice-part-pixels">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    100px 100px 100px 100px;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  		<h3>Set width columns with fr:</h3>
+  		<div class="practice-part practice-part-fr">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    1fr 1fr 1fr 1fr;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  	</section>
+
+  	<section id="part-4" class='part' data-next="part-5">
+  		<h2>Grid Tracks with repeat notation</h2>
+  		<p>
+  		Repeat notation can be used for a part of the track listing.</p>
+  		<h3>Create grid with 50px track then repeating section of 3 2fr tracks:</h3>
+  		<div class="practice-part practice-part-repeat">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    50px repeat(3, 2fr);
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  		<h3>Create a repeating pattern of tracks:</h3>
+  		<div class="practice-part practice-part-pattern">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 3fr 1fr);
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  			</div>
+  		</div>
+  	</section>
+
+  	<section id="part-5" class='part' data-next="part-6">
+  		<h2>Grid track sizing and minmax()</h2>
+  		<p>We can define a set size for tracks with the grid-auto-rows and grid-auto-columns properties.</p>
+  		<p>In grid we may give tracks a minimum and maximum size with the minmax() function.  We using minmax() in the value of grid-auto-rows.</p>
+  		<p>Using auto means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
+  		<h3>Set track 50px tall:</h3>
+  		<div class="practice-part practice-part-auto-rows">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   grid-auto-rows: 50px
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nibh ligula. Donec non lectus et elit pharetra fringilla a in magna. Aenean pellentesque efficitur porta.</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  				<div class="grid-item">9</div>
+  			</div>
+  		</div>
+  		<h3>Create grid with minimum 50px tall and maximum of auto:</h3>
+  		<div class="practice-part practice-part-minmax">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    50px repeat(3, 2fr);
+   grid-auto-rows: minmax(50px, auto)
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nibh ligula. Donec non lectus et elit pharetra fringilla a in magna. Aenean pellentesque efficitur porta.</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  			</div>
+  		</div>
+  	</section>
+
+
+  	<section id="part-6" class='part' data-next="part-7">
+  		<h2>Grid lines</h2>
+  		<p>It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items.</p>
+  		<p>Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this with grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-row, grid-column properties.</p>
+
+  		<h3>Grid-column-start and grid-column-end properties:</h3>
+  		<div class="practice-part practice-part-column-start-end">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+  }
+  #block-1{
+   background-color: #ffe5d4
+   grid-column-start: 1;
+   grid-column-end: 3;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">#block-1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  			</div>
+  		</div>
+  		<h3>Grid-row-start and grid-row-end properties:</h3>
+  		<div class="practice-part practice-part-row-start-end">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(2, 1fr);
+  }
+  #block-1{
+   background-color: #ffe5d4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">#block-1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  				<div class="grid-item">9</div>
+  			</div>
+  		</div>
+  				<h3>Grid-column and grid-row properties:</h3>
+  		<div class="practice-part practice-part-column-row">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+  }
+  #block-1{
+   background-color: #ffe5d4
+   grid-column: 1/3;
+   grid-row: 1/3;
+  }
+  #block-8{
+   background-color: #ffe5d4
+   grid-column: span 4;
+   grid-row: 4;
+  }
+
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">#block-1
+  				<span class="text-description">
+  					 grid-column: 1/3;<br />
+  //starting in the 1 column
+  and ending in the 3th<br />
+   grid-row: 1/3;<br />
+  //starting in the 1 row
+  and ending in the 3th
+  					</span>
+  				</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div id="block-8" class="grid-item">
+  					#block-8
+  					<span class="text-description">grid-column: span 4; <br />
+  					// Starting in the 1 column and ending in the 5th <br />
+  					grid-row: 4;<br />
+  					//starting in the 4th row and ending in the 5th</span>
+  				</div>
+  			</div>
+  		</div>
+
+  	</section>
+
+  		<section id="part-7" class='part' data-next="part-8">
+  		<h2>Gutters</h2>
+  		<p>Gutters or alleys between grid cells can be created using the column-gap and row-gap properties, or the shorthand gap.</p>
+  		<h3>Column-gap and row-gap properties:</h3>
+  		<div class="practice-part practice-part-column-row-gap">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   column-gap: 5px;
+   row-gap: 15px
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  			</div>
+  		</div>
+  		<h3>Gap property:</h3>
+  		<div class="practice-part practice-part-gap">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   gap: 10px;
+  }
+  			</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  			</div>
+  		</div>
+  	</section>
+
+  	<section id="part-8" class='part' data-next="part-9">
+  		<h2>Aligment in CSS Grids</h2>
+  		<p>In the grid layout, we are aligning the items inside their grid area. We can use justify-items, justify-self, align-self and align-items properties with values: auto, normal, start, end, center, stretch, baseline.</p>
+  		<h3>Justify-items and align-items properties:</h3>
+  		<div class="practice-part practice-part-aligment-1">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   grid-auto-rows: 130px;
+   justify-items: end;
+   align-items: end;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  		<h3>Align-self and justify-self properties:</h3>
+  		<div class="practice-part practice-part-aligment-2">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   grid-auto-rows: 140px;
+   justify-items: start
+   align-items: center;
+  }
+  #block-1{
+   align-self: stretch;
+   justify-self: stretch;
+  }
+  			</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">#block-1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  			</div>
+  		</div>
+  	</section>
+
+
+  	<section id="part-9" class='part' data-next="part-10">
+  		<h2>Auto-filling trucks in CSS Grids</h2>
+  		<p>Grid can to create as many column tracks as will fit in the container. We use repeat notation and the auto-fill and auto-fit properties for it. And for flexibility we can use minmax() function in repeat notation.</p>
+  		<h3>Auto-fill property:</h3>
+  		<div class="practice-part practice-part-auto-fill">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+   repeat(auto-fill, 120px);
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  			</div>
+  		</div>
+  		<h3>Auto-fill property with minmax():</h3>
+  		<div class="practice-part practice-part-auto-fill-minmax">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(auto-fill, minmax(120px, 1fr));
+   }
+  			</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div class="grid-item">1</div>
+  				<div class="grid-item">2</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">Long long long long long long long very long text...</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  			</div>
+  		</div>
+  	</section>
+
+  	<section id="part-10" class='part' data-next="part-11">
+  		<h2> Automatic Placement in Grid</h2>
+  		<p>Grid items that aren’t explicitly placed are automatically placed into an unoccupied space in the grid container by the auto-placement algorithm. grid-auto-flow controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid. Grid-auto-flow has values: row, column, dense.</p>
+  		<dl>
+  		<dt>row</dt>
+      <dd>The auto-placement algorithm places items by filling each row in turn, adding new rows as necessary. If neither row nor column is provided, row is assumed.</dd>
+  <dt>column</dt>
+      <dd>The auto-placement algorithm places items by filling each column in turn, adding new columns as necessary.</dd>
+  <dt>dense</dt>
+      <dd>If specified, the auto-placement algorithm uses a “dense” packing algorithm, which attempts to fill in holes earlier in the grid if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items. </dd>
+  		</dl>
+  		<h3>Grid-auto-flow property with row value:</h3>
+  		<div class="practice-part practice-part-auto-flow-row">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+   repeat(3, 1fr);
+   grid-auto-flow: row;
+  }
+  #block-1{
+   grid-column: 1/span 2;
+  }
+  #block-2{
+   grid-row: 2/span 2;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">
+  					#block-1
+  					<span class="text-description">
+  						 grid-column: 1/span 2;<br />
+  						//start in the 1 column
+   						and ending in the 3th
+  					</span>
+  				</div>
+  				<div id="block-2" class="grid-item">
+  					#block-2
+  					<span class="text-description">
+  						 grid-row: 2/span 2;<br />
+  						//start in the 2 row
+   						and ending in the 4th
+  					</span>
+  				</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  			</div>
+  		</div>
+  		<h3>Grid-auto-flow property with column value:</h3>
+  		<div class="practice-part practice-part-auto-flow-column">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+   repeat(3, 1fr);
+   grid-auto-flow: column;
+  }
+  #block-1{
+   grid-row: 1/span 3;
+  }
+  #block-2{
+   grid-row: 1/span 2;
+  }
+  				</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">
+  					#block-1
+  					<span class="text-description">
+  						 grid-row: 1/span 3;<br />
+  							//start in the 1 row
+   							and ending in the 4th
+
+  					</span>
+  				</div>
+  				<div id="block-2" class="grid-item">#block-2
+  					<span class="text-description">
+  						 grid-row: 1/span 2;<br />
+  							//start in the 1 row
+   							and ending in the 3th
+  					</span>
+  				</div>
+  				<div class="grid-item">3</div>
+  				<div class="grid-item">4</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  				<div class="grid-item">8</div>
+  			</div>
+  		</div>
+  		<h3>Grid-auto-flow property with dense value:</h3>
+  		<div class="practice-part practice-part-auto-flow-dense">
+  			<div class="code-part">
+  				<code>#grid{
+   display: grid;
+   grid-template-columns:
+    repeat(3, 1fr);
+   grid-auto-flow: dense;
+   }
+  #block-1{
+   grid-column: span 2 / 4 ;
+  }
+  #block-2{
+   grid-row: 1/span 4;
+  }
+  #block-4{
+   grid-row: 3 / span 2;
+  }
+  			</code>
+  			</div>
+  			<div id="grid" class="demo-part">
+  				<div id="block-1" class="grid-item">
+  					#block-1
+  					<span class="text-description">
+  						 grid-column: span 2 / 4 ;<br />
+   							// start in the 4 column
+   							and ending in the 2th column
+  					</span>
+  				</div>
+  				<div id="block-2" class="grid-item">
+  					#block-2
+  					<span class="text-description">
+  						 grid-row: 1/span 4;<br />
+  							// start in the 1 row
+  							 and endind in the 5th
+  					</span>
+  				</div>
+  				<div class="grid-item">3</div>
+  				<div id="block-4" class="grid-item">
+  					#block-4
+  					<span class="text-description">
+  						 grid-row: 3 / span 2; <br />
+  							//start in the 3 row
+  							 and ending in the 5th
+  					</span>
+  				</div>
+  				<div class="grid-item">5</div>
+  				<div class="grid-item">6</div>
+  				<div class="grid-item">7</div>
+  			</div>
+  		</div>
+  	</section>
+
+
+  	<footer>
+  		For more information read <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#What_is_a_grid" target="_blank">MDN Web Docs</a> and <a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank">W3.org</a>
+  	</footer>
+  </main>
+
   <section id="contact">
     <div class="overlay">
       <div class="containers">
