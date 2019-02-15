@@ -245,13 +245,14 @@
   grid-row: 4;
 }
 
-/*#app #part-7 .practice-part-column-row-gap .demo-part {
+#app #part-7 .practice-part-column-row-gap .demo-part {
   grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 5px;
-          column-gap: 5px;
+  column-gap: 5px;
   row-gap: 15px;
 }
-#app #part-7 .practice-part-gap .demo-part {
+
+/*#app #part-7 .practice-part-gap .demo-part {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
