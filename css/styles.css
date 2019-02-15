@@ -329,12 +329,13 @@
   color: #000;
 }
 
-/*#app .practice-part-auto-flow-dense #block-2 {
+#app .practice-part-auto-flow-dense #block-2 {
   grid-row: 1/span 4;
   background-color: #ffe5d4;
   color: #000;
 }
-#app .practice-part-auto-flow-dense #block-4 {
+
+/*#app .practice-part-auto-flow-dense #block-4 {
   grid-row: 3/span 2;
   background-color: #ffe5d4;
   color: #000;
