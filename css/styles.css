@@ -195,11 +195,12 @@
   grid-template-columns: repeat(3, 3fr 1fr);
 }
 
-/*#app #part-5 .practice-part-auto-rows .demo-part {
+#app #part-5 .practice-part-auto-rows .demo-part {
   grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: 50px;
 }
-#app #part-5 .practice-part-minmax .demo-part {
+
+/*#app #part-5 .practice-part-minmax .demo-part {
   grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(50px, auto);
 }
