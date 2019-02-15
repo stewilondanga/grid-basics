@@ -335,13 +335,13 @@
   color: #000;
 }
 
-/*#app .practice-part-auto-flow-dense #block-4 {
+#app .practice-part-auto-flow-dense #block-4 {
   grid-row: 3/span 2;
   background-color: #ffe5d4;
   color: #000;
 }
 
-.containers {
+/*.containers {
   width: 520px;
   margin: 20px auto;
 }
