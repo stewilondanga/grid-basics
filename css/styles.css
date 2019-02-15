@@ -98,11 +98,12 @@
   border-bottom: var(--basic-border);
 }
 
-/*#app .part ul {
+#app .part ul {
   margin: 0;
   padding: 0 auto;
 }
-#app .part ul li {
+
+/*#app .part ul li {
   padding: 6px 0;
 }
 #app .part a {
