@@ -48,13 +48,14 @@
   box-shadow: var(--shadow-level-1);
 }
 
-/*#app header h1 {
+#app header h1 {
   margin: 0;
   text-align: center;
   padding: 10px;
   color: #fff;
 }
-#app footer {
+
+/*#app footer {
   background: #274060;
   box-shadow: var(--shadow-footer);
   text-align: center;
