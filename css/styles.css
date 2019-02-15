@@ -155,12 +155,13 @@
   word-wrap: normal;
 }
 
-/*#app .practice-part .demo-part {
+#app .practice-part .demo-part {
   display: grid;
   background: #1b998b;
   border: var(--basic-border);
 }
-#app .practice-part .demo-part .grid-item {
+
+/*#app .practice-part .demo-part .grid-item {
   padding: 5px;
   border: 1px solid #fff;
   font-size: 16px;
