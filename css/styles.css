@@ -312,12 +312,13 @@
   color: #000;
 }
 
-/*#app #part-10 .practice-part-auto-flow-column #block-2 {
+#app #part-10 .practice-part-auto-flow-column #block-2 {
   grid-row: 1/span 2;
   background-color: #ffe5d4;
   color: #000;
 }
-#app .practice-part-auto-flow-dense .demo-part {
+
+/*#app .practice-part-auto-flow-dense .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: dense;
 }
