@@ -271,11 +271,12 @@
   align-items: center;
 }
 
-/*#app #part-8 .practice-part-aligment-2 #block-1 {
+#app #part-8 .practice-part-aligment-2 #block-1 {
   align-self: stretch;
   justify-self: stretch;
 }
-#app #part-9 .practice-part-auto-fill .demo-part {
+
+/*#app #part-9 .practice-part-auto-fill .demo-part {
   grid-template-columns: repeat(auto-fill, 120px);
 }
 #app .practice-part-auto-fill-minmax .demo-part {
