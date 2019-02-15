@@ -137,13 +137,14 @@
   opacity: 1;
 }
 
-/*#app .practice-part {
+#app .practice-part {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
   overflow: hidden;
 }
-#app .practice-part .code-part {
+
+/*#app .practice-part .code-part {
   padding: 7px;
   border: var(--basic-border);
 }
