@@ -1,4 +1,4 @@
-body {
+/*body {
   text-align: center;
   font-family: courier;
   background-image: url("../assets/image.jpeg");
@@ -19,6 +19,282 @@ body {
 
 .my_social a img {
   height: 1.5em;
+}
+
+:root {
+  --shadow-level-1: 0 1px 2px 1px rgba(0,0,0,0.2);
+  --shadow-level-2: 0 2px 3px 2px rgba(0,0,0,0.2);
+  --shadow-footer: 0 -1px 2px 1px rgba(0,0,0,0.2);
+  --basic-border: 1px solid #ccc;
+}
+
+#app {
+  min-height: 100vh;
+  background: #d7d9ce;
+}
+#app a {
+  -webkit-text-decoration: undeline;
+          text-decoration: undeline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+#app #arrow-down {
+  position: fixed;
+  bottom: 30px;
+  right: 5%;
+  font-size: 24px;
+  text-align: center;
+  z-index: 1;
+  color: #0c7489;
+}
+#app header {
+  background: #274060;
+  border-bottom: var(--basic-border);
+  box-shadow: var(--shadow-level-1);
+}
+#app header h1 {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+#app footer {
+  background: #274060;
+  box-shadow: var(--shadow-footer);
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+#app footer a {
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  color: #fff;
+}
+#app footer a:hover, #app footer a:active {
+  color: #1b998b;
+}
+#app .part {
+  width: 90%;
+  min-height: 100px;
+  margin: 20px auto;
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-level-1);
+  position: relative;
+  -webkit-transform: translatex(-130%);
+          transform: translatex(-130%);
+}
+#app .part#part-1 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+#app .part h2 {
+  color: #274060;
+  text-align: center;
+  margin: 0 5px;
+  padding: 0 0 12px 0;
+  border-bottom: var(--basic-border);
+}
+#app .part ul {
+  margin: 0;
+  padding: 0 auto;
+}
+#app .part ul li {
+  padding: 6px 0;
+}
+#app .part a {
+  color: #0c7489;
+}
+#app .part a:hover, #app .part a:active {
+  color: #1b998b;
+}
+#app .part a:after {
+  content: attr(data-tooltip);
+  display: block;
+  width: 300px;
+  padding: 14px;
+  background: #fff;
+  color: #000;
+  border: var(--basic-border);
+  box-shadow: var(--shadow-level-2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: all 0.2s ease;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#app .part a:hover:after {
+  opacity: 1;
+}
+#app .practice-part {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  overflow: hidden;
+}
+#app .practice-part .code-part {
+  padding: 7px;
+  border: var(--basic-border);
+}
+#app .practice-part .code-part code {
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}
+#app .practice-part .demo-part {
+  display: grid;
+  background: #1b998b;
+  border: var(--basic-border);
+}
+#app .practice-part .demo-part .grid-item {
+  padding: 5px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+#app .practice-part .demo-part .text-description {
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #274060;
+}
+#app #part-3 .practice-part-pixels .demo-part {
+  grid-template-columns: 100px 100px 100px 100px;
+}
+#app #part-3 .practice-part-fr .demo-part {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#app #part-4 .practice-part-repeat .demo-part {
+  grid-template-columns: 50px repeat(3, 2fr);
+}
+#app #part-4 .practice-part-pattern .demo-part {
+  grid-template-columns: repeat(3, 3fr 1fr);
+}
+#app #part-5 .practice-part-auto-rows .demo-part {
+  grid-template-columns: repeat(3, 2fr);
+  grid-auto-rows: 50px;
+}
+#app #part-5 .practice-part-minmax .demo-part {
+  grid-template-columns: repeat(3, 2fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+#app #part-6 .practice-part-column-start-end .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+}
+#app #part-6 .practice-part-column-start-end #block-1 {
+  color: #000;
+  background-color: #ffe5d4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#app #part-6 .practice-part-row-start-end .demo-part {
+  grid-template-columns: repeat(2, 1fr);
+}
+#app #part-6 .practice-part-row-start-end #block-1 {
+  color: #000;
+  background-color: #ffe5d4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#app #part-6 .practice-part-column-row .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+}
+#app #part-6 .practice-part-column-row #block-1 {
+  color: #000;
+  background-color: #ffe5d4;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+#app #part-6 .practice-part-column-row #block-8 {
+  color: #000;
+  background-color: #ffe5d4;
+  grid-column: 1/span 4;
+  grid-row: 4;
+}
+#app #part-7 .practice-part-column-row-gap .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 15px;
+}
+#app #part-7 .practice-part-gap .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+#app #part-8 .practice-part-aligment-1 .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 130px;
+  justify-items: end;
+  align-items: end;
+}
+#app #part-8 .practice-part-aligment-2 .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 130px;
+  justify-items: start;
+  align-items: center;
+}
+#app #part-8 .practice-part-aligment-2 #block-1 {
+  align-self: stretch;
+  justify-self: stretch;
+}
+#app #part-9 .practice-part-auto-fill .demo-part {
+  grid-template-columns: repeat(auto-fill, 120px);
+}
+#app .practice-part-auto-fill-minmax .demo-part {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+#app #part-10 .practice-part-auto-flow-row .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+#app #part-10 .practice-part-auto-flow-row #block-1 {
+  grid-column: 1/span 2;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app #part-10 .practice-part-auto-flow-row #block-2 {
+  grid-row: 2/span 2;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app #part-10 .practice-part-auto-flow-column .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+}
+#app #part-10 .practice-part-auto-flow-column #block-1 {
+  grid-row: 1/span 3;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app #part-10 .practice-part-auto-flow-column #block-2 {
+  grid-row: 1/span 2;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app .practice-part-auto-flow-dense .demo-part {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+}
+#app .practice-part-auto-flow-dense #block-1 {
+  grid-column: span 2/4;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app .practice-part-auto-flow-dense #block-2 {
+  grid-row: 1/span 4;
+  background-color: #ffe5d4;
+  color: #000;
+}
+#app .practice-part-auto-flow-dense #block-4 {
+  grid-row: 3/span 2;
+  background-color: #ffe5d4;
+  color: #000;
 }
 
 .containers {
