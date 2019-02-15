@@ -289,12 +289,13 @@
   grid-auto-flow: row;
 }
 
-/*#app #part-10 .practice-part-auto-flow-row #block-1 {
+#app #part-10 .practice-part-auto-flow-row #block-1 {
   grid-column: 1/span 2;
   background-color: #ffe5d4;
   color: #000;
 }
-#app #part-10 .practice-part-auto-flow-row #block-2 {
+
+/*#app #part-10 .practice-part-auto-flow-row #block-2 {
   grid-row: 2/span 2;
   background-color: #ffe5d4;
   color: #000;
