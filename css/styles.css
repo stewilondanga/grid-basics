@@ -276,10 +276,11 @@
   justify-self: stretch;
 }
 
-/*#app #part-9 .practice-part-auto-fill .demo-part {
+#app #part-9 .practice-part-auto-fill .demo-part {
   grid-template-columns: repeat(auto-fill, 120px);
 }
-#app .practice-part-auto-fill-minmax .demo-part {
+
+/*#app .practice-part-auto-fill-minmax .demo-part {
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 #app #part-10 .practice-part-auto-flow-row .demo-part {
