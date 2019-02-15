@@ -25,13 +25,14 @@
   background: #d7d9ce;
 }
 
-/*#app a {
+#app a {
   -webkit-text-decoration: undeline;
-          text-decoration: undeline;
+  text-decoration: undeline;
   -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed;
+  text-decoration-style: dashed;
 }
-#app #arrow-down {
+
+/*#app #arrow-down {
   position: fixed;
   bottom: 30px;
   right: 5%;
