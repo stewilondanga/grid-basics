@@ -161,7 +161,7 @@
   border: var(--basic-border);
 }
 
-/*#app .practice-part .demo-part .grid-item {
+#app .practice-part .demo-part .grid-item {
   padding: 5px;
   border: 1px solid #fff;
   font-size: 16px;
@@ -171,7 +171,8 @@
   align-items: center;
   overflow: hidden;
 }
-#app .practice-part .demo-part .text-description {
+
+/*#app .practice-part .demo-part .text-description {
   padding: 8px 10px;
   font-size: 13px;
   line-height: 1.4;
