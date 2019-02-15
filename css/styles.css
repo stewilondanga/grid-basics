@@ -264,13 +264,14 @@
   align-items: end;
 }
 
-/*#app #part-8 .practice-part-aligment-2 .demo-part {
+#app #part-8 .practice-part-aligment-2 .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 130px;
   justify-items: start;
   align-items: center;
 }
-#app #part-8 .practice-part-aligment-2 #block-1 {
+
+/*#app #part-8 .practice-part-aligment-2 #block-1 {
   align-self: stretch;
   justify-self: stretch;
 }
