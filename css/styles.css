@@ -55,14 +55,15 @@
   color: #fff;
 }
 
-/*#app footer {
+#app footer {
   background: #274060;
   box-shadow: var(--shadow-footer);
   text-align: center;
   color: #fff;
   padding: 10px;
 }
-#app footer a {
+
+/*#app footer a {
   -webkit-text-decoration-style: solid;
           text-decoration-style: solid;
   color: #fff;
