@@ -32,7 +32,7 @@
   text-decoration-style: dashed;
 }
 
-/*#app #arrow-down {
+#app #arrow-down {
   position: fixed;
   bottom: 30px;
   right: 5%;
@@ -41,7 +41,8 @@
   z-index: 1;
   color: #0c7489;
 }
-#app header {
+
+/*#app header {
   background: #274060;
   border-bottom: var(--basic-border);
   box-shadow: var(--shadow-level-1);
