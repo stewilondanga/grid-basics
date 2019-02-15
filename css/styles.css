@@ -284,11 +284,12 @@
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
-/*#app #part-10 .practice-part-auto-flow-row .demo-part {
+#app #part-10 .practice-part-auto-flow-row .demo-part {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: row;
 }
-#app #part-10 .practice-part-auto-flow-row #block-1 {
+
+/*#app #part-10 .practice-part-auto-flow-row #block-1 {
   grid-column: 1/span 2;
   background-color: #ffe5d4;
   color: #000;
