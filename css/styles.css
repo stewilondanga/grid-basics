@@ -90,14 +90,15 @@
   transform: translateX(0);
 }
 
-/*#app .part h2 {
+#app .part h2 {
   color: #274060;
   text-align: center;
   margin: 0 5px;
   padding: 0 0 12px 0;
   border-bottom: var(--basic-border);
 }
-#app .part ul {
+
+/*#app .part ul {
   margin: 0;
   padding: 0 auto;
 }
