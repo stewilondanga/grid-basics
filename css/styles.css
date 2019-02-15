@@ -103,10 +103,11 @@
   padding: 0 auto;
 }
 
-/*#app .part ul li {
+#app .part ul li {
   padding: 6px 0;
 }
-#app .part a {
+
+/*#app .part a {
   color: #0c7489;
 }
 #app .part a:hover, #app .part a:active {
